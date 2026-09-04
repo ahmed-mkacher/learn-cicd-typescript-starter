@@ -51,4 +51,4 @@ jobs:
         run: gcloud run deploy notely --image us-central1-docker.pkg.dev/notely-507611/notely-ar-repo/notely:latest --region us-central1 --allow-unauthenticated --project notely-507611 --max-instances=4
 
       - name: Run Database Migrations
-        run: npm db:migrate
+        run: npm run db:migrate
