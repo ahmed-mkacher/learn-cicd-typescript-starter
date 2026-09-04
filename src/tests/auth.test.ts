@@ -3,7 +3,7 @@ import { getAPIKey } from "../api/auth.js";
 
 const headers_1 = {};
 const headers_2 = { authorization: "" };
-const headers_3 = { authorization: "ApiKey Hello there " };
+const headers_3 = { authorization: "ApiKey there " };
 
 describe.for([
   { state: "missing", headers: headers_1, expected: null },
