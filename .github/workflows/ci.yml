@@ -22,7 +22,9 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Format
-        run: npm run format:check
+        run: |
+            npm run format:check
+            npm run lint
 
   tests:
     name: Tests
