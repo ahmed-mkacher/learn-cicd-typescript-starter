@@ -22,7 +22,7 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Format
-        run: npm run format:write
+        run: npm run format:check
 
   tests:
     name: Tests
