@@ -33,13 +33,13 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
-      - name: 'Set up Cloud SDK'
+      - name: Set up Cloud SDK
         uses: 'google-github-actions/setup-gcloud@v3'
         with:
           version: '>= 363.0.0'
 
       - name: Build Docker Image
-        run : docker run -e PORT=8080 -p 8080:8080 ahmadmkacher/notely:latest
+        run : docker build .
 
       - name: Push image to GC-AR
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-507611/notely-ar-repo/notely:latest .
