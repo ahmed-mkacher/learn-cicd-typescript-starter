@@ -28,12 +28,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - id: auth
-        uses: google-github-actions/auth@v2
-        with: '${{ secrets.GCP_CREDENTIALS }}'
+      - id: GCP Auth
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
-      - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v3
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v3'
         with:
           version: '>= 363.0.0'
 
