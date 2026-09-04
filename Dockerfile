@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 ADD . .
 
-RUN npm ci
+RUN npm ci --ignore-scripts --no-audit --no-fund
 
 RUN npm run build
 
